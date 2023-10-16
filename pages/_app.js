@@ -6,10 +6,6 @@ const MyApp = ({ Component, pageProps }) => (
   <>
     <Head>
       <title>NextJS APP</title>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-        rel="stylesheet"
-      />
     </Head>
     <Layout>
       <main>
