@@ -1,7 +1,5 @@
-const Contacts = () => (
-  <>
-    <h1>Contacts list:</h1>
-  </>
-);
+import Heading from '@/components/Heading';
+
+const Contacts = () => <Heading text="Contacts list:" />;
 
 export default Contacts;
