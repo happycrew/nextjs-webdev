@@ -1,6 +1,7 @@
 import styles from '../styles/Navbar.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FC } from 'react';
 import { useRouter } from 'next/router';
 
 const navigation = [
@@ -9,7 +10,7 @@ const navigation = [
   { id: 3, title: 'Contacts', path: '/contacts' },
 ];
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const { pathname } = useRouter();
 
   return (

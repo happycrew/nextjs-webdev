@@ -1,6 +1,6 @@
-import Heading from '@/components/Heading';
-import Socials from '@/components/Socials';
-import styles from '@/styles/Home.module.scss';
+import Heading from '../components/Heading';
+import Socials from '../components/Socials';
+import styles from '../styles/Home.module.scss';
 
 export const getStaticProps = async () => {
   const response = await fetch(`${process.env.API_HOST}/socials`);
@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 const Home = ({ socials }) => {
   return (
     <div className={styles.wrapper}>
-      <Heading text="NextJS APP" />
+      <Heading text="NextJS APP" tag={undefined} />
       <Socials socials={socials} />
     </div>
   );
