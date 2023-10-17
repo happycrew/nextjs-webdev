@@ -1,5 +1,5 @@
 import Heading from '@/components/Heading';
-import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 export const getStaticProps = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -10,7 +10,7 @@ export const getStaticProps = async () => {
       notFound: true,
     };
   }
-  
+
   return {
     props: { contacts: data },
   };
@@ -22,9 +22,11 @@ const Contacts = ({ contacts }) => {
       <Heading text="Contacts list:" />
       <ul>
         {contacts &&
-          contacts.map(({ id, name, email }) => (
+          contacts.map(({ id, name }) => (
             <li key={id}>
-              <strong>{name}</strong> ({email})
+              <Link style={{ textDecoration: 'none', color: 'black' }} href={`/contacts/${id}`}>
+                {name}
+              </Link>
             </li>
           ))}
       </ul>
