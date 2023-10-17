@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
   };
 };
 
+
 const Contacts = ({ contacts }) => {
   return (
     <>
@@ -23,8 +24,13 @@ const Contacts = ({ contacts }) => {
       <ul>
         {contacts &&
           contacts.map(({ id, name }) => (
-            <li key={id}>
-              <Link style={{ textDecoration: 'none', color: 'black' }} href={`/contacts/${id}`}>
+            <li key={id} style={{ listStyle: 'none', marginTop: '5px' }}>
+              <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'black',
+                }}
+                href={`/contacts/${id}`}>
                 {name}
               </Link>
             </li>
