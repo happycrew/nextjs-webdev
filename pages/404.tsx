@@ -1,5 +1,5 @@
-import Heading from '@/components/Heading';
-import styles from '@/styles/404.module.scss';
+import Heading from '../components/Heading';
+import styles from '../styles/404.module.scss';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -15,7 +15,7 @@ const Error = () => {
   return (
     <div className={styles.wrapper}>
       <div>
-        <Heading text="404" />
+        <Heading text="404" tag={undefined} />
         <Heading tag="h2" text="Something is going wrong..." />
       </div>
     </div>
