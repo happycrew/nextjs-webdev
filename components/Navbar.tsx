@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
 import { useRouter } from 'next/router';
+import React from 'react';
 
 const navigation = [
   { id: 1, title: 'Home', path: '/' },

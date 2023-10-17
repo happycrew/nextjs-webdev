@@ -1,3 +1,4 @@
+import React from 'react';
 import { postType } from '../types';
 import Heading from './Heading';
 import { FC } from 'react';
